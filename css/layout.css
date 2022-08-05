@@ -1,0 +1,97 @@
+:root{
+    --cor-principal: #F5B947;
+    --cor-principal-clara: #FFC963;
+    --cor-principal-escura: #A87920;
+    --cor-secundaria-clara: #4793F5;
+    --cor-secundaria-escura: #0F53A8;
+    --cor-neutra-clara: #F5F5F5;
+    --cor-neutra-escura: #333344;
+    --espaco-padrao: 16px;
+    --espaco-pequeno: 8px;
+    --espaco-grande: 32px;
+}
+*{
+    color: var(--cor-neutra-clara);
+}
+a{
+    color: var(--cor-secundaria-escura);
+    text-decoration: underline;
+}
+body{
+    background-color: var(--cor-principal-clara);
+}
+header{
+    background-color: var(--cor-principal);
+    overflow: auto;
+    margin-bottom: var(--espaco-grande);
+    text-align: center;
+}
+h1{
+    display: inline-block;
+    margin-top: .8em;
+    font-size: 120px;
+}
+header > aside.p-absolute{
+    float: right;
+    margin: var(--espaco-padrao);
+    padding: var(--espaco-grande);
+    border-radius: var(--espaco-pequeno);
+    background-color: var(--cor-principal-escura);
+}
+header > aside.p-absolute .form-group{
+    width: 250px;
+}
+section{
+    margin: auto;
+    margin-bottom: var(--espaco-padrao);
+    background-color: var(--cor-secundaria-clara);
+    width: 960px;
+    border-radius: var(--espaco-pequeno);
+    line-height: normal;
+}
+section div{
+    padding: var(--espaco-padrao);
+}
+.livro-imagem{
+    width: auto !important;
+}
+.livro-imagem img{
+    width: 130px;
+}
+.livro-contexto > *{
+    font-size: 2em;
+}
+.material-icons{
+    font-size: 3em;
+}
+.livro-marcos{
+    width: 100px !important;
+}
+.livro-marcos > div{
+    position: relative;
+}
+.livro-marcos .round{
+    position: absolute;
+    top: 2.5em;
+    left: 2em;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria-escura);
+    padding: .6em;
+}
+.form-inline div{
+    margin: auto;
+    margin-bottom: var(--espaco-grande) !important;
+}
+.form-inline .form-control{
+    margin-right: var(--espaco-grande);
+    width: 500px;
+}
+.p-relative{
+    position: relative;
+}
+.d-flex{
+    display: flex;
+}
+.d-flex > *{
+    width: 100%;
+}
