@@ -36,40 +36,45 @@
         <h1>Books</h1>
     </header>
     <main>
-        <form action="" class="form-inline">
+        <form action="ws/salvar.php" class="form-inline">
             <div class="form-group">
                 <input type="text" name="txt_livro"
                     class="form-control" id="txt_livro">
-                <input type="button" value="Salvar"
+                <input type="submit" value="Salvar"
                     class="btn btn-primary" id="btn_salvar">
             </div>
         </form>
-        <?php
-        $dados = Conexao::execWithReturn("");
-        if(!$dados){
-            echo Conexao::$erro;
-        }
-        else{
-            print_r($dados);
-        }
-        ?>
         <div id="livros">
-            <section class="d-flex">
+            <?php
+            require_once "model/Conexao.php";
+            
+            if(!Conexao::execWithReturn("select * from book;")){
+                echo Conexao::getErro();
+            }
+            else{
+                // echo "sucesso";
+                $dados = Conexao::getData();
+                //print_r($dados);
+                foreach($dados as $livro){
+                    // echo "oi";
+                    // echo $livro['nome'];
+            ?>
+                <section class="d-flex">
                 <div class="livro-imagem">
                     <img src="img/livro.webp" alt="Imagem do livro">
                 </div>
                 <div class="livro-contexto">
                     <p class="livro-dados">
                         Livro:
-                        <span id="livro-nome">Sonhos</span>
+                        <span id="livro-nome"><?= $livro['nome']; ?></span>
                     </p>
                     <p class="livro-dados">
                         Páginas:
-                        <span id="livro-paginas">168</span>
+                        <span id="livro-paginas"><?= $livro['paginas']; ?></span>
                     </p>
                     <p class="livro-dados">
                         Autor/a/as/es:
-                        <span id="livro-autores">Desconhecido</span>
+                        <span id="livro-autores"><?= $livro['autor']; ?></span>
                     </p>
                 </div>
                 <div class="livro-marcos">
@@ -91,6 +96,11 @@
                     </div>
                 </div>
             </section>
+            <?php
+                }
+            }
+            ?>
+            
         </div>
     </main>
 </body>
