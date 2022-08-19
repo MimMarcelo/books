@@ -84,7 +84,7 @@
                             book
                         </span>
                         <span class="round">
-                            12
+                            0
                         </span>
                     </div>
                     <div onclick="updateMark(this)">
@@ -92,7 +92,7 @@
                             favorite
                         </span>
                         <span class="round">
-                            12
+                            0
                         </span>
                     </div>
                 </div>
