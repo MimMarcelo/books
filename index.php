@@ -34,9 +34,6 @@
             </form>
         </aside>
         <h1>Books</h1>
-        <p>
-            <?= getenv('DATABASE_URL'); ?>
-        </p>
     </header>
     <main>
         <form action="" class="form-inline">
@@ -47,6 +44,15 @@
                     class="btn btn-primary" id="btn_salvar">
             </div>
         </form>
+        <?php
+        $dados = Conexao::execWithReturn("");
+        if(!$dados){
+            echo Conexao::$erro;
+        }
+        else{
+            print_r($dados);
+        }
+        ?>
         <div id="livros">
             <section class="d-flex">
                 <div class="livro-imagem">
