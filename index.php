@@ -34,6 +34,9 @@
             </form>
         </aside>
         <h1>Books</h1>
+        <p>
+            <?= getenv('DATABASE_URL'); ?>
+        </p>
     </header>
     <main>
         <form action="" class="form-inline">
