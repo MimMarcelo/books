@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css">
+    <script src="js/updateMark.js" defer></script>
     <script src="js/book.js" defer></script>
 </head>
 <body>
@@ -78,7 +79,7 @@
                     </p>
                 </div>
                 <div class="livro-marcos">
-                    <div>
+                    <div onclick="updateMark(this)">
                         <span class="material-icons">
                             book
                         </span>
@@ -86,7 +87,7 @@
                             12
                         </span>
                     </div>
-                    <div>
+                    <div onclick="updateMark(this)">
                         <span class="material-icons">
                             favorite
                         </span>
