@@ -95,3 +95,6 @@ section div{
 .d-flex > *{
     width: 100%;
 }
+.livro-marcos > * {
+    cursor: pointer;
+}
