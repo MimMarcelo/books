@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css">
+    <script src="js/book.js" defer></script>
 </head>
 <body>
     <header class="p-relative">
@@ -40,157 +41,48 @@
                 <input type="text" name="txt_livro"
                     class="form-control" id="txt_livro">
                 <input type="button" value="Salvar"
-                    class="btn btn-primary">
+                    class="btn btn-primary" id="btn_salvar">
             </div>
         </form>
-        <section class="d-flex">
-            <div class="livro-imagem">
-                <img src="img/livro.webp" alt="Imagem do livro">
-            </div>
-            <div class="livro-contexto">
-                <p class="livro-dados">
-                    Livro:
-                    <span id="livro-nome">Sonhos</span>
-                </p>
-                <p class="livro-dados">
-                    Páginas:
-                    <span id="livro-paginas">168</span>
-                </p>
-                <p class="livro-dados">
-                    Autor/a/as/es:
-                    <span id="livro-autores">Desconhecido</span>
-                </p>
-            </div>
-            <div class="livro-marcos">
-                <div>
-                    <span class="material-icons">
-                        mark_email_read
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
+        <div id="livros">
+            <section class="d-flex">
+                <div class="livro-imagem">
+                    <img src="img/livro.webp" alt="Imagem do livro">
                 </div>
-                <div>
-                    <span class="material-icons">
-                        favorite
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
+                <div class="livro-contexto">
+                    <p class="livro-dados">
+                        Livro:
+                        <span id="livro-nome">Sonhos</span>
+                    </p>
+                    <p class="livro-dados">
+                        Páginas:
+                        <span id="livro-paginas">168</span>
+                    </p>
+                    <p class="livro-dados">
+                        Autor/a/as/es:
+                        <span id="livro-autores">Desconhecido</span>
+                    </p>
                 </div>
-            </div>
-        </section>
-        <section class="d-flex">
-            <div class="livro-imagem">
-                <img src="img/livro.webp" alt="Imagem do livro">
-            </div>
-            <div class="livro-contexto">
-                <p class="livro-dados">
-                    Livro:
-                    <span id="livro-nome">Sonhos</span>
-                </p>
-                <p class="livro-dados">
-                    Páginas:
-                    <span id="livro-paginas">168</span>
-                </p>
-                <p class="livro-dados">
-                    Autor/a/as/es:
-                    <span id="livro-autores">Desconhecido</span>
-                </p>
-            </div>
-            <div class="livro-marcos">
-                <div>
-                    <span class="material-icons">
-                        mark_email_read
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
+                <div class="livro-marcos">
+                    <div>
+                        <span class="material-icons">
+                            book
+                        </span>
+                        <span class="round">
+                            12
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-icons">
+                            favorite
+                        </span>
+                        <span class="round">
+                            12
+                        </span>
+                    </div>
                 </div>
-                <div>
-                    <span class="material-icons">
-                        favorite
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
-                </div>
-            </div>
-        </section>
-        <section class="d-flex">
-            <div class="livro-imagem">
-                <img src="img/livro.webp" alt="Imagem do livro">
-            </div>
-            <div class="livro-contexto">
-                <p class="livro-dados">
-                    Livro:
-                    <span id="livro-nome">Sonhos</span>
-                </p>
-                <p class="livro-dados">
-                    Páginas:
-                    <span id="livro-paginas">168</span>
-                </p>
-                <p class="livro-dados">
-                    Autor/a/as/es:
-                    <span id="livro-autores">Desconhecido</span>
-                </p>
-            </div>
-            <div class="livro-marcos">
-                <div>
-                    <span class="material-icons">
-                        mark_email_read
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
-                </div>
-                <div>
-                    <span class="material-icons">
-                        favorite
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
-                </div>
-            </div>
-        </section>
-        <section class="d-flex">
-            <div class="livro-imagem">
-                <img src="img/livro.webp" alt="Imagem do livro">
-            </div>
-            <div class="livro-contexto">
-                <p class="livro-dados">
-                    Livro:
-                    <span id="livro-nome">Sonhos</span>
-                </p>
-                <p class="livro-dados">
-                    Páginas:
-                    <span id="livro-paginas">168</span>
-                </p>
-                <p class="livro-dados">
-                    Autor/a/as/es:
-                    <span id="livro-autores">Desconhecido</span>
-                </p>
-            </div>
-            <div class="livro-marcos">
-                <div>
-                    <span class="material-icons">
-                        mark_email_read
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
-                </div>
-                <div>
-                    <span class="material-icons">
-                        favorite
-                    </span>
-                    <span class="round">
-                        12
-                    </span>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </body>
 </html>
