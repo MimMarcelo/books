@@ -34,7 +34,14 @@
                 </div>
             </form>
         </aside>
-        <h1>Books</h1>
+        <h1>
+            <?= "Books" ?>
+        </h1>
+        <h2>
+            <?php 
+            echo "Os mais temidos";
+            ?>
+        </h2>
     </header>
     <main>
         <form action="" class="form-inline">
@@ -46,6 +53,17 @@
             </div>
         </form>
         <div id="livros">
+            <?php
+            require_once "model/Conexao.php";
+
+            $sql = "select * from book;";
+
+            if(Conexao::execWithReturn($sql)){
+                print_r(Conexao::getData());
+            }else{
+                echo Conexao::getErro();
+            }
+            ?>
             <section class="d-flex">
                 <div class="livro-imagem">
                     <img src="img/livro.webp" alt="Imagem do livro">
